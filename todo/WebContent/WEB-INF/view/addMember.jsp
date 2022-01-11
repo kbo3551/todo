@@ -6,11 +6,12 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 	<div class="container pt-5">
 	<h1 class="text-center">회원가입</h1>
-	<form class="form-inline" method ="post" action ="${pageContext.request.contextPath}/addMember">
+	<form class="form-inline" method ="post" action ="${pageContext.request.contextPath}/addMember" name="AddMember">
 		<div style=" margin: 100px 410px">					
 			<div>아이디</div>
 			<div>
@@ -23,10 +24,25 @@
 			</div>
 			<div style="text-align:center; width:220px; height:35px; font-size:15px; padding:0 10px">
 				<br>
-				<button type="submit" class="btn btn-outline-info ">회원 가입완료</button>			
+				<button type="button" class="btn btn-outline-info " onclick="addMember()">회원 가입완료</button>			
 			</div>
 		</div>
 	</form>	
 	</div>
+	
+	<script>
+    // 유효성 검사
+    function addMember(){		
+		if($("#memberId").val() == ""){
+			alert('ID를 입력하세요.');
+			return;
+		} else if($("#memberPw").val() == ""){
+			alert('PW를 입력하세요.');
+			return;
+		} else {
+			AddMember.submit();
+		}
+	};
+</script>
 </body>
 </html>

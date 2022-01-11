@@ -9,6 +9,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -38,7 +39,7 @@
 		</div>
 		<div class="container pt-5">
 			<h1 class="text-center">login</h1>
-			<form id="loginForm" class="form-inline" method="post" action="${pageContext.request.contextPath}/login">
+			<form id="loginForm" class="form-inline" method="post" action="${pageContext.request.contextPath}/login" name="Login">
 				<div style="margin: 100px 410px">
 					<div>아이디</div>
 					<div>
@@ -54,7 +55,7 @@
 							placeholder="password" value="">
 					</div>
 					<div style="margin: 50px 110px">
-						<button type="submit" class="btn btn-outline-primary">로그인</button>
+						<button type="button" class="btn btn-outline-primary" onclick="login()">로그인</button>
 					</div>
 				</div>
 			</form>
@@ -62,5 +63,19 @@
 				<a class="btn btn-outline-danger" href="${pageContext.request.contextPath}/addMember">회원가입</a>
 			</div>
 		</div>
+			<script>
+    // 유효성 검사
+    function login(){		
+		if($("#memberId").val() == ""){
+			alert('ID를 입력하세요.');
+			return;
+		} else if($("#memberPw").val() == ""){
+			alert('PW를 입력하세요.');
+			return;
+		} else {
+			Login.submit();
+		}
+	};
+</script>
 </body>
 </html>
