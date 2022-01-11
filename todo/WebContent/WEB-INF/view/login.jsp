@@ -37,10 +37,10 @@
 			<!-- 1) /adminLogin, AdminLoginController.doGet(), adminLogin.jsp -->
 			<!-- 2) /adminLogin, dminLoginController.doPost(), /admin/adminIndex, AdminIndexController.doGet(), adminIndex.jsp -->
 		</div>
-		<div class="container pt-5">
-			<h1 class="text-center">login</h1>
+		<div class="container pt-5 text-center">
+			<h1>login</h1>
 			<form id="loginForm" class="form-inline" method="post" action="${pageContext.request.contextPath}/login" name="Login">
-				<div style="margin: 100px 410px">
+				<div class="table">
 					<div>아이디</div>
 					<div>
 						<input type="text" id="memberId" name="memberId"
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 			</form>
-			<div style="text-align: center">
+			<div class="table">
 				<a class="btn btn-outline-danger" href="${pageContext.request.contextPath}/addMember">회원가입</a>
 			</div>
 		</div>
