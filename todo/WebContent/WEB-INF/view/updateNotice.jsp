@@ -22,11 +22,11 @@
 					<table class="table table-borderless text-center">
 						<tr>
 							<td>제목:</td>
-							<td><input type="text" name="noticeTitle" value="${n.noticeTitle}"></td>
+							<td><input class="form-control" type="text" name="noticeTitle" value="${n.noticeTitle}"></td>
 						</tr>
 						<tr>
 							<td>내용:</td>
-							<td><textarea rows="3" cols="50" name="noticeContent">${n.noticeContent}</textarea>
+							<td><textarea class="form-control" rows="3" cols="50" name="noticeContent">${n.noticeContent}</textarea>
 							</td>
 						</tr>
 					</table>

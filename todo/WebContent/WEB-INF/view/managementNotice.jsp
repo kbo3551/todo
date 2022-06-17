@@ -45,11 +45,11 @@
 		<table>
 			<tr>
 				<td>제목:</td>
-				<td><input type="text" size="48" name="noticeTitle"></td>
+				<td><input class="form-control" type="text" size="48" name="noticeTitle"></td>
 			</tr>
 			<tr>
 				<td>내용: &nbsp;</td>
-				<td><textarea rows="3" cols="50" name="noticeContent"></textarea>
+				<td><textarea class="form-control" rows="3" cols="50" name="noticeContent"></textarea>
 				</td>
 			</tr>
 		</table>
