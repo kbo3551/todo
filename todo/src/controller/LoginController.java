@@ -26,7 +26,7 @@ public class LoginController extends HttpServlet {
 		HttpSession session = request.getSession();
 		// 로그인이 되어있는 상태
 		if(session.getAttribute("loginMember") != null) { 
-			response.sendRedirect(request.getContextPath()+"/memer/calendar");
+			response.sendRedirect(request.getContextPath()+"/member/calendar");
 			return;
 		}
 		// 공지사항을 출력

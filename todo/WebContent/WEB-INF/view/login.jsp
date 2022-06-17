@@ -43,16 +43,12 @@
 				<div class="table">
 					<div>아이디</div>
 					<div>
-						<input type="text" id="memberId" name="memberId"
-							style="text-align: left; width: 320px; height: 30px; font-size: 20px; padding: 0 10px"
-							placeholder="id" value="">
+						<input type="text" id="memberId" name="memberId" style="text-align: left; width: 320px; height: 30px; font-size: 20px; padding: 0 10px" class="form-control" placeholder="id" value="guest">
 					</div>
 					<br>
 					<div>비밀번호 :</div>
 					<div>
-						<input type="password" id="memberPw" name="memberPw"
-							style="text-align: left; width: 320px; height: 30px; font-size: 20px; padding: 0 10px"
-							placeholder="password" value="">
+						<input type="password" id="memberPw" name="memberPw" style="text-align: left; width: 320px; height: 30px; font-size: 20px; padding: 0 10px" class="form-control" placeholder="password" value="1234">
 					</div>
 					<div style="margin: 50px 110px">
 						<button type="button" class="btn btn-outline-primary" onclick="login()">로그인</button>
@@ -63,7 +59,7 @@
 				<a class="btn btn-outline-danger" href="${pageContext.request.contextPath}/addMember">회원가입</a>
 			</div>
 		</div>
-			<script>
+<script>
     // 유효성 검사
     function login(){		
 		if($("#memberId").val() == ""){
