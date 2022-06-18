@@ -14,14 +14,14 @@
 	<h1 class="display-3">admin 로그인</h1>
 	<br>
 	<form method="post" action="${pageContext.request.contextPath}/adminLogin" name="AdminLogin">
-		<table class="table">
+		<table class="table" style="align-content: center;">
 			<tr>
-				<td>아이디</td>
-				<td><input type="text" id="adminId" name="adminId"></td>
+				<td style="padding-left: 10rem;">아이디</td>
+				<td><input type="text" id="adminId" class="form-control" name="adminId"  style="text-align: left; width: 320px; height: 30px; font-size: 20px; padding: 0 10px" value="admin"></td>
 			</tr>
 			<tr>
-				<td>패스워드</td>
-				<td><input type="password" id="adminPw" name="adminPw"></td>
+				<td style="padding-left: 10rem;">패스워드</td>
+				<td><input type="password" id="adminPw" class="form-control" name="adminPw"  style="text-align: left; width: 320px; height: 30px; font-size: 20px; padding: 0 10px" value="1234"></td>
 			</tr>
 		</table>
 		<button type="button" class="btn btn-outline-primary" onclick="adminLogin()">로그인</button>
